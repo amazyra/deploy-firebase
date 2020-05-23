@@ -10,8 +10,9 @@ if [ -z "${FIREBASE_PROJECT}" ]; then
     exit 1
 fi
 
-
+cd /github/workspace
+echo $(ls)
 firebase deploy \
-    -m "${GITHUB_SHA}" \
-    --project ${FIREBASE_PROJECT} \
+    -m "GITHUB_SHA: ${GITHUB_SHA}" \
+    --project "${FIREBASE_PROJECT}" \
     --only hosting
