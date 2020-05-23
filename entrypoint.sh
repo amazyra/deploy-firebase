@@ -12,6 +12,10 @@ fi
 
 cd /github/workspace
 echo $(ls)
+echo =======
+echo $(ls view)
+echo =======
+echo $(pwd)
 firebase deploy \
     -m "GITHUB_SHA: ${GITHUB_SHA}" \
     --project "${FIREBASE_PROJECT}" \
