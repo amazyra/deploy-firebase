@@ -1,3 +1,4 @@
 #!/bin/bash
 
-docker build -t lowply/deploy-firebase .
+docker build -t amazyra/deploy-firebase .
+docker run -v hoge -t amazyra/deploy-firebase
